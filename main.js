@@ -48,5 +48,32 @@
   }
 
 
-  
+  $(document).ready(function(){
+    $("#registre").submit(function(event) {
+      event.preventDefault()
+      var mdp=$("#motdepasse").val()
+      var cnf=$("#confirmation").val()
+      var email=$("#email").val()
+      var user =$({email:email,motdepasse:mdp})
+      if(mdp===cnf && mdp.length>=8 && cnf.length>=8){
+        localStorage.setItem("user",JSON.stringify(user))
+        window.location.href = "login.html";
+      }else{
+        alert("The two passwords must be identical")
+      }
+    })
+    $("#login").submit(function(event) {
+        event.preventDefault()
+        var mdp=$("#motdepasse").val()
+        var email=$("#email").val()
+        var user =JSON.parse(localStorage.getItem("user"))
+        console.log(user[0]);
+        if(user[0].email===email && user[0].motdepasse===mdp){
+          window.location.href = "main.html";
+        }else{
+          alert("user not found")
+        }
+      })
+
+})
   
