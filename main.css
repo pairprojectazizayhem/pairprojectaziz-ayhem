@@ -6,6 +6,7 @@ body {
   }
 
   #backgroundVideo {
+   
     position: fixed;
     top: 0;
     left: 0;
@@ -14,9 +15,14 @@ body {
     object-fit: cover;
     z-index: -1; /* I set the z-index to place the background video behind other elements */
   }
+
 label{
 color: rgb(196, 200, 206);
 
+    }
+    option{
+      font-weight: bold;
+      color: darkblue;
     }
 #content {
     position: relative;
@@ -45,12 +51,26 @@ opacity:0.5 ;
     margin-top: 20px;
   }
 
-  #websiteFrame {
-    width: 70%;
-    height: 600px;
-    border: 1px solid #101824;
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px #00f;
+    }
+    50% {
+      box-shadow: 0 0 20px rgb(174, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 10px rgb(0, 255, 153);
+    }
+  }
+  
+  /* Apply the glow animation to all buttons with the class "glow-button" */
+  .bt {
+    animation: glow 1s infinite;
+    font-weight: bold;
     border-radius: 25px;
+    padding: 7px;
+    background-color: cornsilk;
+   
 
- 
   }
   

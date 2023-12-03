@@ -31,29 +31,20 @@
   <label for="visitors">Visitors per Year:</label>
   <input type="number" id="visitors" placeholder="Enter visitors per year">
 
-  <button onclick="addObject()">Add to Dropdown</button> <!--this is the button that will add an object  -->
+  <button class="bt" onclick="addObject()">Add to Dropdown</button> <!--this is the button that will add an object  -->
 
 
   <h3>-The List of Famous Landmarks-</h3>
   <select id="objectDropdown"></select> <!--this is the droplist  in which we'll be adding our options  -->
 
-  <button onclick="removeSelectedObject()">Remove Selected Object</button> <!--this is the button that will remove an object on click  -->
+  <button class="bt" onclick="removeSelectedObject()">Remove Selected Object</button> <!--this is the button that will remove an object on click  -->
+  <button class="bt" onclick="sortDropdown()">Sort by UNESCO Approval</button>
+
   
-<!-- this body is where i want my video to be displayed & it has an id of "videocontainer"-->
-<div id="videoContainer" style="text-align: center;"></div>
-<div style=" overflow: hidden; position: relative;">
-    <br>
-   <br>
-      <video autoplay controls
-        width="50%"
-        height="45%"
-        src="list of famous landmarks.mp4"
-        style="object-fit: cover;"
-      >
-      
-      </video>
-     
-    </div>
+<!-- this body is where i want my video to be displayed & it has an id of "videocontainer that refers to the element created in js "-->
+<div id="videoContainer" ></div>
+
+
 
 </body>
 </html>
